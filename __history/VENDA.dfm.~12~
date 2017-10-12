@@ -53,8 +53,8 @@ object frmVenda: TfrmVenda
     FocusControl = DBEdit5
   end
   object DBEdit1: TDBEdit
-    Left = 32
-    Top = 21
+    Left = 8
+    Top = 24
     Width = 134
     Height = 21
     DataField = 'codigo_venda'
