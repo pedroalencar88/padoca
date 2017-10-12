@@ -1,0 +1,78 @@
+object frmCliente: TfrmCliente
+  Left = 0
+  Top = 0
+  Align = alCustom
+  Caption = 'CADASTRO CLIENTE'
+  ClientHeight = 414
+  ClientWidth = 888
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object DBGrid1: TDBGrid
+    Left = 24
+    Top = 64
+    Width = 630
+    Height = 120
+    DataSource = dsCLIENTE
+    TabOrder = 0
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'Tahoma'
+    TitleFont.Style = []
+  end
+  object DBNavigator1: TDBNavigator
+    Left = 24
+    Top = 24
+    Width = 630
+    Height = 25
+    DataSource = dsCLIENTE
+    TabOrder = 1
+  end
+  object CLIENTE: TFDQuery
+    SQL.Strings = (
+      'select * from cliente')
+    Left = 112
+    Top = 336
+    object CLIENTEcodigo_cliente: TFDAutoIncField
+      FieldName = 'codigo_cliente'
+      Origin = 'codigo_cliente'
+      ProviderFlags = [pfInWhere, pfInKey]
+      ReadOnly = True
+    end
+    object CLIENTEnome: TStringField
+      FieldName = 'nome'
+      Origin = 'nome'
+      Required = True
+      Size = 50
+    end
+    object CLIENTEcpf: TStringField
+      FieldName = 'cpf'
+      Origin = 'cpf'
+      Required = True
+      Size = 14
+    end
+    object CLIENTEdata_nasc: TSQLTimeStampField
+      FieldName = 'data_nasc'
+      Origin = 'data_nasc'
+      Required = True
+    end
+    object CLIENTEfone: TStringField
+      FieldName = 'fone'
+      Origin = 'fone'
+      Required = True
+      Size = 25
+    end
+  end
+  object dsCLIENTE: TDataSource
+    DataSet = CLIENTE
+    Left = 112
+    Top = 288
+  end
+end

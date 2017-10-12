@@ -1,0 +1,85 @@
+unit MENUPRINCIPAL;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, FireDAC.Stan.Intf, FireDAC.Stan.Option,
+  FireDAC.Stan.Error, FireDAC.UI.Intf, FireDAC.Phys.Intf, FireDAC.Stan.Def,
+  FireDAC.Stan.Pool, FireDAC.Stan.Async, FireDAC.Phys, FireDAC.Phys.MSSQL,
+  FireDAC.Phys.MSSQLDef, FireDAC.VCLUI.Wait, FireDAC.Stan.Param, FireDAC.DatS,
+  FireDAC.DApt.Intf, FireDAC.DApt, Data.DB, FireDAC.Comp.DataSet,
+  FireDAC.Comp.Client, Vcl.Menus, Vcl.Imaging.pngimage, Vcl.ExtCtrls,
+  Vcl.StdCtrls;
+
+type
+  TfrmPrincipal = class(TForm)
+    FDConnection1: TFDConnection;
+    CLIENTE: TFDQuery;
+    CLIENTEcodigo_cliente: TFDAutoIncField;
+    CLIENTEnome: TStringField;
+    CLIENTEcpf: TStringField;
+    CLIENTEdata_nasc: TSQLTimeStampField;
+    CLIENTEfone: TStringField;
+    FUNCIONARIO: TFDQuery;
+    FDAutoIncField1: TFDAutoIncField;
+    StringField1: TStringField;
+    StringField2: TStringField;
+    SQLTimeStampField1: TSQLTimeStampField;
+    StringField3: TStringField;
+    GERENTE: TFDQuery;
+    FDAutoIncField2: TFDAutoIncField;
+    StringField4: TStringField;
+    StringField5: TStringField;
+    SQLTimeStampField2: TSQLTimeStampField;
+    StringField6: TStringField;
+    VENDA: TFDQuery;
+    FDAutoIncField3: TFDAutoIncField;
+    StringField7: TStringField;
+    StringField8: TStringField;
+    SQLTimeStampField3: TSQLTimeStampField;
+    StringField9: TStringField;
+    PRODUTO: TFDQuery;
+    FDAutoIncField4: TFDAutoIncField;
+    StringField10: TStringField;
+    StringField11: TStringField;
+    SQLTimeStampField4: TSQLTimeStampField;
+    StringField12: TStringField;
+    ITEM_VENDA: TFDQuery;
+    FDAutoIncField5: TFDAutoIncField;
+    StringField13: TStringField;
+    StringField14: TStringField;
+    SQLTimeStampField5: TSQLTimeStampField;
+    StringField15: TStringField;
+    MainMenu1: TMainMenu;
+    Image1: TImage;
+    Cadastros1: TMenuItem;
+    C1: TMenuItem;
+    FUNCIONRIOS1: TMenuItem;
+    SAIR1: TMenuItem;
+    REALIZARVENDA1: TMenuItem;
+    CADASTRODEPRODUTOS1: TMenuItem;
+    CADASTRODEFUNCIONRIOS1: TMenuItem;
+    CADASTRARCLIENTE1: TMenuItem;
+    procedure CADASTRARCLIENTE1Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmPrincipal: TfrmPrincipal;
+
+implementation
+
+{$R *.dfm}
+
+uses CLIENTE, FUNCIONARIO, PRODUTO, VENDA;
+
+procedure TfrmPrincipal.CADASTRARCLIENTE1Click(Sender: TObject);
+begin
+    frmCliente.Show;
+end;
+
+end.
