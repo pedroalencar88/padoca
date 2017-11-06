@@ -1,0 +1,149 @@
+object FRMPRODUTO: TFRMPRODUTO
+  Left = 0
+  Top = 0
+  Caption = 'CADASTRO DE PRODUTO'
+  ClientHeight = 462
+  ClientWidth = 452
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Image1: TImage
+    Left = 312
+    Top = 24
+    Width = 105
+    Height = 105
+  end
+  object Label1: TLabel
+    Left = 8
+    Top = 8
+    Width = 75
+    Height = 13
+    Caption = 'codigo_produto'
+    FocusControl = DBEdit1
+  end
+  object Label2: TLabel
+    Left = 8
+    Top = 48
+    Width = 45
+    Height = 13
+    Caption = 'descricao'
+    FocusControl = DBEdit2
+  end
+  object Label3: TLabel
+    Left = 8
+    Top = 88
+    Width = 27
+    Height = 13
+    Caption = 'preco'
+    FocusControl = DBEdit3
+  end
+  object Label4: TLabel
+    Left = 8
+    Top = 128
+    Width = 22
+    Height = 13
+    Caption = 'qtde'
+    FocusControl = DBEdit4
+  end
+  object DBEdit1: TDBEdit
+    Left = 8
+    Top = 24
+    Width = 134
+    Height = 21
+    DataField = 'codigo_produto'
+    DataSource = DataSource1
+    TabOrder = 0
+  end
+  object DBEdit2: TDBEdit
+    Left = 8
+    Top = 64
+    Width = 290
+    Height = 21
+    DataField = 'descricao'
+    DataSource = DataSource1
+    TabOrder = 1
+  end
+  object DBEdit3: TDBEdit
+    Left = 8
+    Top = 104
+    Width = 69
+    Height = 21
+    DataField = 'preco'
+    DataSource = DataSource1
+    TabOrder = 2
+  end
+  object DBEdit4: TDBEdit
+    Left = 8
+    Top = 144
+    Width = 134
+    Height = 21
+    DataField = 'qtde'
+    DataSource = DataSource1
+    TabOrder = 3
+  end
+  object DBGrid1: TDBGrid
+    Left = 8
+    Top = 218
+    Width = 436
+    Height = 230
+    DataSource = DataSource1
+    TabOrder = 4
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'Tahoma'
+    TitleFont.Style = []
+  end
+  object DBNavigator1: TDBNavigator
+    Left = 8
+    Top = 187
+    Width = 430
+    Height = 25
+    DataSource = DataSource1
+    TabOrder = 5
+  end
+  object QPRODUTO: TFDQuery
+    Active = True
+    Connection = DataModule1.FDConnection1
+    SQL.Strings = (
+      'SELECT * FROM PRODUTO')
+    Left = 344
+    Top = 304
+    object QPRODUTOcodigo_produto: TFDAutoIncField
+      FieldName = 'codigo_produto'
+      Origin = 'codigo_produto'
+      ProviderFlags = [pfInWhere, pfInKey]
+      ReadOnly = True
+    end
+    object QPRODUTOdescricao: TStringField
+      DisplayWidth = 30
+      FieldName = 'descricao'
+      Origin = 'descricao'
+      Required = True
+      Size = 50
+    end
+    object QPRODUTOpreco: TBCDField
+      FieldName = 'preco'
+      Origin = 'preco'
+      Required = True
+      Precision = 4
+      Size = 2
+    end
+    object QPRODUTOqtde: TIntegerField
+      FieldName = 'qtde'
+      Origin = 'qtde'
+      Required = True
+    end
+  end
+  object DataSource1: TDataSource
+    DataSet = QPRODUTO
+    Left = 344
+    Top = 360
+  end
+end
