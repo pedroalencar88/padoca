@@ -30,6 +30,7 @@ type
     procedure REALIZARVENDA1Click(Sender: TObject);
     procedure CADASTRARCLIENTE1Click(Sender: TObject);
     procedure CADASTRARFUNCIONRIO1Click(Sender: TObject);
+    procedure SpeedButton4Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -43,7 +44,7 @@ implementation
 
 {$R *.dfm}
 
-uses DM, LOGIN, PRODUTO, VENDA, CLIENTE, FUNCIONARIO;
+uses DM, LOGIN, PRODUTO, VENDA, CLIENTE, FUNCIONARIO, RELATORIO;
 
 procedure TFRMMENU.CADASTRARCLIENTE1Click(Sender: TObject);
 begin
@@ -77,7 +78,13 @@ end;
 
 procedure TFRMMENU.SpeedButton2Click(Sender: TObject);
 begin
+  FRMVENDA := TFRMVENDA.create ( application );
   FRMVENDA.ShowModal;
+end;
+
+procedure TFRMMENU.SpeedButton4Click(Sender: TObject);
+begin
+  FRMRELATORIO.Show;
 end;
 
 end.

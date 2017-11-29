@@ -1,7 +1,7 @@
 object FRMCLIENTE: TFRMCLIENTE
   Left = 0
   Top = 0
-  Caption = 'FRMCLIENTE'
+  Caption = 'CADASTRO DE CLIENTE'
   ClientHeight = 462
   ClientWidth = 452
   Color = clBtnFace
@@ -53,6 +53,12 @@ object FRMCLIENTE: TFRMCLIENTE
     Caption = 'fone'
     FocusControl = DBEdit5
   end
+  object Image1: TImage
+    Left = 339
+    Top = 8
+    Width = 105
+    Height = 105
+  end
   object DBEdit1: TDBEdit
     Left = 8
     Top = 24
@@ -65,7 +71,7 @@ object FRMCLIENTE: TFRMCLIENTE
   object DBEdit2: TDBEdit
     Left = 8
     Top = 64
-    Width = 429
+    Width = 306
     Height = 21
     DataField = 'nome'
     DataSource = DSCLIENTE

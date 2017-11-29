@@ -8,7 +8,8 @@ uses
   PRODUTO in 'PRODUTO.pas' {FRMPRODUTO},
   VENDA in 'VENDA.pas' {FRMVENDA},
   CLIENTE in 'CLIENTE.pas' {FRMCLIENTE},
-  FUNCIONARIO in 'FUNCIONARIO.pas' {FRMFUNCIONARIO};
+  FUNCIONARIO in 'FUNCIONARIO.pas' {FRMFUNCIONARIO},
+  RELATORIO in 'RELATORIO.pas' {FRMRELATORIO};
 
 {$R *.res}
 
@@ -22,5 +23,6 @@ begin
   Application.CreateForm(TFRMVENDA, FRMVENDA);
   Application.CreateForm(TFRMCLIENTE, FRMCLIENTE);
   Application.CreateForm(TFRMFUNCIONARIO, FRMFUNCIONARIO);
+  Application.CreateForm(TFRMRELATORIO, FRMRELATORIO);
   Application.Run;
 end.

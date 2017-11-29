@@ -4353,6 +4353,7 @@ object FRMMENU: TFRMMENU
       FEFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
       FFFF}
     ParentFont = False
+    OnClick = SpeedButton4Click
   end
   object MainMenu1: TMainMenu
     Left = 184

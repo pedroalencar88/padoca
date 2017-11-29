@@ -31,6 +31,7 @@ type
     DBEdit5: TDBEdit;
     DBGrid1: TDBGrid;
     DBNavigator1: TDBNavigator;
+    Image1: TImage;
   private
     { Private declarations }
   public
